@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome</title>
+</head>
+<body>
+    <div class="container">
+        <p>Type text and see if its Palindrome or not...</p>
+        <textarea id="text" name="story" rows="10" cols="66" placeholder="Your text goes here..."></textarea>
+        <br>
+        <button onclick="mainF()" id="btn1">Check</button>
+        <button onclick="cleanData()" id="btn1">Clean</button>
+        <button onclick="clearAll()" id="btn1">Clear</button>
+    </div>
+    <script>
+
+
+function cleanData(){
+    const textArea = document.getElementById('text');
+         const text = textArea.value;
+
+        let cleanedData = text.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+        textArea.value = cleanedData;
+}
+
+
+function mainF() {
+            let textArea = document.getElementById('text');
+            let text = textArea.value;
+
+
+            let cleanedData = text.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+
+            let reversedData = '';
+            for (let i = cleanedData.length - 1; i >= 0; i--) {
+                reversedData += cleanedData[i];
+            }
+
+
+            let isPalindrome = reversedData === cleanedData;
+
+
+            let output = `Cleaned Data: ${cleanedData}\nReversed Data: ${reversedData}\nPalindrome: ${isPalindrome}`;
+
+
+            textArea.value = output;
+        }
+
+
+        function fml(){
+            let str1 = document.getElementById('text')
+            str1.value += '\nBoo..\n'
+        }
+        function clearAll(){
+            let str1 = document.getElementById('text')
+            str1.value = ''
+        }
+    </script>
+</body>
+</html>

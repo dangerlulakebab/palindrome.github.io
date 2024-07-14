@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+p{
+    margin-left: -32vh;
+    color: rgba(0, 0, 0, 0.418)
+}
+
+.container {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
